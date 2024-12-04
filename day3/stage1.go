@@ -5,10 +5,10 @@ import (
 	"strconv"
 )
 
-func stage1(input []byte) int {
+func stage1(input string) int {
 	pattern, _ := regexp.Compile("mul\\((\\d+),(\\d+)\\)")
 
-	matches := pattern.FindAllStringSubmatch(string(input), -1)
+	matches := pattern.FindAllStringSubmatch(input, -1)
 	accumulator := 0
 
 	for _, match := range matches {
