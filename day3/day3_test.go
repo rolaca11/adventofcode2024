@@ -18,7 +18,7 @@ func TestStage1(t *testing.T) {
 	file, _ := os.ReadFile("./stage1")
 
 	result := stage1(file)
-	if result != 161 {
+	if result != 170068701 {
 		t.Error(result)
 	}
 }
