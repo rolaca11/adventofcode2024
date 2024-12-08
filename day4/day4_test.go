@@ -22,3 +22,21 @@ func TestStage1(t *testing.T) {
 		t.Error(result)
 	}
 }
+
+func TestStage2Example(t *testing.T) {
+	file, _ := os.ReadFile("./stage1_example")
+
+	result := stage2(NewPlane(string(file)))
+	if result != 9 {
+		t.Error(result)
+	}
+}
+
+func TestStage2(t *testing.T) {
+	file, _ := os.ReadFile("./stage1")
+
+	result := stage2(NewPlane(string(file)))
+	if result != 1873 {
+		t.Error(result)
+	}
+}
